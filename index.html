@@ -11,65 +11,80 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#team">team</a></li>
-                <li><a href="#mission">mission</a></li>
-                <li><a href="#contact">contact</a></li>
+
+    <header class="side__header">
+        <nav class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#projects">projects</a></li>
+                <li class="menu__item"><a class="menu__link" href="#team">team</a></li>
+                <li class="menu__item"><a class="menu__link" href="#mission">mission</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contact">contact</a></li>
             </ul>
         </nav>
-        <div class="slogan">
-        <h1>we create.</h1>
-        <p>strategy is our first name</p>
-    </div>
+        <div class="header__slogan">
+            <h1 class="header__slogan--primary">we create.</h1>
+            <p class="header__slogan--additional">strategy is our first name</p>
+        </div>
     </header>
-    <section class="projects-section" id="projects" >
-        <article>
-            <h3>projects</h3>
-            <p>Af gastropub venmo cliche air plant meh. Mollit man bun nesciunt, commodo synth placeat forage
-                tousled ad pitchfork tilde venmo iceland 3 wolf moon. Cray eu vape flexitarian. Next level DIY odio
-                skateboard, listicle PBR&B shoreditch blog humblebrag cornhole. Blue bottle wayfarers mumblecore af
-                heirloom cillum. Aliquip etsy irony veniam, do whatever vice air plant microdosing paleo wayfarers
-                flannel celiac XOXO. Affogato mumblecore migas blue bottle dolor single-origin coffee.</p>
-            <button>find out more</button>
-        </article>
-        <img src="images/img1.jpg" alt="">
-    </section>
-    <section class="team-section" id="team">
-        <img src="images/img2.jpg" alt="">
-        <article>
-            <h3>company's culture</h3>
-            <p>Celiac venmo tilde, put a bird on it vinyl man braid etsy plaid fanny pack next level 3 wolf moon
-                chia single-origin coffee organic. Chillwave activated charcoal cliche, hoodie 3 wolf moon fam
-                pop-up tousled swag hammock wolf bushwick. Ugh blue bottle post-ironic blog williamsburg. Glossier
-                godard disrupt hoodie leggings vexillologist crucifix, iceland truffaut. Microdosing fashion axe
-                biodiesel poutine, waistcoat helvetica salvia meditation ramps twee.</p>
-            <button>find out more</button>
-        </article>
-    </section>
-    <section class="banner-section">
-        <h2>Our crazy ideas</h2>
-    </section>
-    <section class="experience-section" id="mission">
-        <article>
-            <h3>experience</h3>
-            <p>Everyday carry cray vegan microdosing waistcoat, godard portland gentrify viral vape hammock. Prism
-                lyft cold-pressed, snackwave bespoke squid schlitz typewriter pinterest jean shorts. Kale chips
-                pitchfork lumbersexual ugh, messenger bag forage kitsch cold-pressed cred cronut meggings umami.
-                Gastropub ethical copper mug, authentic four loko chicharrones salvia fingerstache vaporware chia
-                church-key hoodie single-origin coffee.</p>
-            <button>find out more</button>
-        </article>
-        <img src="images/img3.jpg" alt="">
-    </section>
-    <footer id="contact">
-        <div class="copyright-container">
+
+    <main class="side__main">
+
+        <div class="card">
+            <div id="projects" class="card__wrapper">
+                <h3 class="card__heading">projects</h3>
+                <p class="card__text">Af gastropub venmo cliche air plant meh. Mollit man bun nesciunt, commodo synth
+                    placeat forage tousled ad pitchfork tilde venmo iceland 3 wolf moon. Cray eu vape flexitarian. Next
+                    level DIY odio
+                    skateboard, listicle PBR&B shoreditch blog humblebrag cornhole. Blue bottle wayfarers mumblecore af
+                    heirloom cillum. Aliquip etsy irony veniam, do whatever vice air plant microdosing paleo wayfarers
+                    flannel celiac XOXO. Affogato mumblecore migas blue bottle dolor single-origin coffee.</p>
+                <button class="card__button">find out more</button>
+            </div>
+            <img class="card__img" src="images/img1.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <img class="card__img" src="images/img2.jpg" alt="">
+            <div id="team" class="card__wrapper">
+                <h3 class="card__heading">company's culture</h3>
+                <p class="card__text">Celiac venmo tilde, put a bird on it vinyl man braid etsy plaid fanny pack next
+                    level
+                    3 wolf moon
+                    chia single-origin coffee organic. Chillwave activated charcoal cliche, hoodie 3 wolf moon fam
+                    pop-up tousled swag hammock wolf bushwick. Ugh blue bottle post-ironic blog williamsburg. Glossier
+                    godard disrupt hoodie leggings vexillologist crucifix, iceland truffaut. Microdosing fashion axe
+                    biodiesel poutine, waistcoat helvetica salvia meditation ramps twee.</p>
+                <button class="card__button">find out more</button>
+            </div>
+        </div>
+
+        <div class="banner">
+            <h2 class="banner__heading">Our crazy ideas</h2>
+        </div>
+
+        <div class="card">
+            <div id="mission" class="card__wrapper">
+                <h3 class="card__heading">experience</h3>
+                <p class="card__text">Everyday carry cray vegan microdosing waistcoat, godard portland gentrify viral
+                    vape
+                    hammock. Prism
+                    lyft cold-pressed, snackwave bespoke squid schlitz typewriter pinterest jean shorts. Kale chips
+                    pitchfork lumbersexual ugh, messenger bag forage kitsch cold-pressed cred cronut meggings umami.
+                    Gastropub ethical copper mug, authentic four loko chicharrones salvia fingerstache vaporware chia
+                    church-key hoodie single-origin coffee.</p>
+                <button class="card__button">find out more</button>
+            </div>
+            <img class="card__img" src="images/img3.jpg" alt="">
+        </div>
+
+    </main>
+
+    <footer class="side__footer" id="contact">
+        <div class="footer__copyright">
             <div>say hello to our team</div>
             <p>created by The Awwwesomes in 2017</p>
         </div>
-        <div class="contact-container">
+        <div class="footer__contact">
             <form action="">
                 <label for="name">name</label>
                 <input type="text" name="name" id="name">
@@ -81,6 +96,7 @@
             </form>
         </div>
     </footer>
+
 </body>
 
 </html>
