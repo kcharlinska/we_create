@@ -1,66 +1,97 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --main-font: 'Roboto', sans-serif;
-    --extra-font: 'Montserrat', sans-serif;
+  --main-font: "Roboto", sans-serif;
+  --extra-font: "Montserrat", sans-serif;
 }
 
 body {
-    font-family: var(--main-font);
-    font-size: 12px;
-    color: #440C74;
+  font-family: var(--main-font);
+  font-size: 12px;
+  color: #440c74;
 }
 
-header {
-    position: relative;
-    height: 445px;
-    background: linear-gradient(45deg, #f86881, #9235ED);
-    /* FIXME: change header gradient; */
+.side__header {
+  position: relative;
+  height: 445px;
+  background: linear-gradient(45deg, #f86881, #9235ed);
+  /* FIXME: change header gradient; */
 }
 
-nav>ul {
-    text-align: center;
+.menu__list {
+  text-align: center;
 }
 
-nav>ul>li {
-    display: inline-block;
-    padding: 25px 20px;
+.menu__item {
+  display: inline-block;
+  padding: 25px 20px;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    font-family: var(--extra-font);
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    /* TODO: a:hover */
+.menu__link {
+  text-decoration: none;
+  font-family: var(--extra-font);
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  /* TODO: a:hover */
 }
 
-.slogan {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: #fff;
-    text-align: center;
+.header__slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
 }
 
-.slogan h1 {
-    font-size: 116px;
-    font-family: var(--extra-font);
+.header__slogan--primary {
+  font-size: 116px;
+  font-family: var(--extra-font);
 }
 
-.slogan p {
-    font-size: 21px;
-    font-family: var(--main-font);
-    letter-spacing: 3px;
-    font-weight: 300;
-    margin-top: -10px;
+.header__slogan--additional {
+  font-size: 21px;
+  font-family: var(--main-font);
+  letter-spacing: 3px;
+  font-weight: 300;
+  margin-top: -10px;
+}
+
+.side__main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+.card__wrapper {
+  width: 409px;
+}
+
+.card__img {
+  width: 409px;
+  height: 100%;
+}
+
+
+.banner {
+  background-image: url(images/fullbg.jpg);
+  width: 100%;
+  height: 300px;
 }
