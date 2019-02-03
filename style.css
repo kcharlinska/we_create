@@ -7,12 +7,13 @@
 :root {
   --regular-font: "Roboto", sans-serif;
   --heading-font: "Montserrat", sans-serif;
+  --main-color: #440c74;
   font-size: 12px;
 }
 
 body {
   font-family: var(--regular-font);
-  color: #440c74;
+  color: var(--main-color);
 }
 
 .side__header {
@@ -24,23 +25,42 @@ body {
 }
 
 .menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
-}
-
-.menu__item {
-  display: inline-block;
-  padding: 25px 20px;
+  list-style: none;
+  min-height: 10vh;
 }
 
 .menu__link {
+  position: relative;
+  display: block;
   text-decoration: none;
   font-family: var(--heading-font);
   font-size: 1.2rem;
-  line-height: 1.2rem;
+  line-height: 10vh;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.5px;
-  /* TODO: a:hover */
+  color: var(--main-color);
+  padding: 0 25px;
+  overflow: hidden;
+}
+
+.menu__link::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: 10%;
+  left: -100%;
+  transition: .4s;
+}
+
+.menu__link:hover::before {
+  left: 10%;
 }
 
 .hero__section {
@@ -247,10 +267,10 @@ body {
   margin: 0 auto;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #440C74;
+  border-bottom: 2px solid var(--main-color);
   padding: 10px;
 }
 
 .form__input__textarea {
-  border: 2px solid #440C74;
+  border: 2px solid var(--main-color);
 }
