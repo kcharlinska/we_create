@@ -1,0 +1,32 @@
+body {
+    font: $font-weight-regular #{$font-size-regular}/#{$main-line-height} $font-main;
+    color: $main-color;
+}
+
+h1 {
+    font: $font-weight-bold 9.5rem $font-heading;
+}
+
+h2 {
+    font: $font-weight-bold 6rem/300px $font-heading;
+    color: $white-color;
+    text-align: center;
+}
+
+h3 {
+    font: $font-weight-bold 2.2rem $font-heading;
+}
+
+a,
+button {
+    font: $font-weight-bold 1.2rem/40px $font-heading;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+input,
+textarea {
+    font: 1.2rem $font-main;
+    color: $main-color;
+}

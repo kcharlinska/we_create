@@ -1,0 +1,52 @@
+// ---- FONTS ----
+
+// Main font
+$font-main: "Roboto",
+sans-serif;
+// Heading font
+$font-heading: "Montserrat",
+sans-serif;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font sizes
+$font-size-regular: 12px;
+
+// ---- COLORS ----
+
+// Regular text color
+$main-color: #440c74;
+// White color
+$white-color: #fff;
+// Header gradient
+$bgc-header: linear-gradient(45deg, #f86881, #9235ed);
+// Footer gradient
+$bgc-footer: linear-gradient(45deg, #fb81c4, #AC47E2);
+// Colors of section numbers
+$color-n1: #E579D7;
+$color-n2: #FB8097;
+$color-n3: #E421B4;
+// Button card border color
+$btn-card-color: #C244C1;
+
+
+
+// ---- ELEMENTS ----
+// Line height
+$main-line-height: 1.8;
+
+
+// ----- BREAKPOINTS -----
+
+// Mobile phones
+$screen-sm-max: 599px;
+// Tablets and small desktops
+$screen-md-max: 1024px;
+// Large tablets and desktops
+// $screen-lg-min: 992px;
+// Large desktops
+$screen-xl-min: 1440px;

@@ -1,0 +1,35 @@
+.header__menu {
+    min-height: 10vh;
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+.menu__link {
+    position: relative;
+    display: block;
+    font: $font-weight-semibold 1.2rem/10vh $font-heading;
+    letter-spacing: 1.5px;
+    color: $main-color;
+    text-transform: uppercase;
+    padding: 0 25px;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        @include position(absolute, $bottom: 10%, $left: -100%);
+        width: 80%;
+        height: 2px;
+        background-color: $main-color;
+        transition: .4s;
+    }
+
+    &:hover::before {
+        left: 10%;
+    }
+}

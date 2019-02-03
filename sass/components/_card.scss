@@ -1,0 +1,58 @@
+.card {
+    @include flexCenter;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 60px 20px;
+
+    &__wrapper {
+        flex-basis: 409px;
+        padding: 20px 40px;
+        margin: 20px 0 0 100px;
+        position: relative;
+
+    }
+
+    &__content {
+        padding: 20px 0;
+    }
+}
+
+
+.card__title {
+    letter-spacing: 2.5px;
+
+    &::before {
+        position: absolute;
+        top: -60px;
+        font-size: 20rem;
+        z-index: -1;
+    }
+
+    .card--one &::before {
+        content: '1.';
+        left: -70px;
+        color: $color-n1;
+    }
+
+    .card--two &::before {
+        content: '2.';
+        left: -70px;
+        color: $color-n2;
+    }
+
+    .card--three &::before {
+        content: '3.';
+        left: -110px;
+        color: $color-n3;
+    }
+}
+
+.card__img {
+    flex-basis: 409px;
+    height: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}

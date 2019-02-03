@@ -1,0 +1,25 @@
+// Flexbox center horizontal and vertical
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Positioning element
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Repositioning element horizontal and vertical
+@mixin translate($x, $y) {
+    transform: translate($x, $y)
+}
+
+// Repositioning element vertical
+@mixin translateY($y) {
+    transform: translateY($y)
+}
