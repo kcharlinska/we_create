@@ -120,7 +120,7 @@ body {
 }
 
 .card__wrapper {
-  width: 409px;
+  flex-basis: 409px;
   padding: 20px 40px;
   margin: 20px 0 0 100px;
   position: relative;
@@ -146,13 +146,13 @@ body {
   color: #E579D7;
 }
 
-.card-two .card__title::before {
+.card--two .card__title::before {
   content: '2.';
   left: -70px;
   color: #FB8097;
 }
 
-.card-three .card__title::before {
+.card--three .card__title::before {
   content: '3.';
   left: -110px;
   color: #E421B4;
@@ -175,8 +175,13 @@ body {
 }
 
 .card__img {
-  width: 409px;
+  flex-basis: 409px;
   height: 100%;
+}
+
+.card__img img {
+  display: block;
+  width: 100%;
 }
 
 .banner {
