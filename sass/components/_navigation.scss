@@ -8,17 +8,38 @@
     justify-content: center;
     text-align: center;
     list-style: none;
+
+    @include sm-media {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(68, 12, 116, 0.9);
+        height: 100vh;
+        width: 70vw;
+        z-index: 1;
+        transition: .3s;
+
+        &.active {
+            left: 0;
+        }
+    }
 }
 
 .menu__link {
     position: relative;
     display: block;
-    font: $font-weight-semibold 1.2rem/10vh $font-heading;
-    letter-spacing: 1.5px;
+    font-weight: $font-weight-semibold;
+    line-height: 10vh;
     color: $main-color;
     text-transform: uppercase;
     padding: 0 25px;
     overflow: hidden;
+
+    @include sm-media {
+        color: $white-color;
+    }
 
     &::before {
         content: '';
@@ -27,6 +48,10 @@
         height: 2px;
         background-color: $main-color;
         transition: .4s;
+
+        @include sm-media {
+            display: none;
+        }
     }
 
     &:hover::before {

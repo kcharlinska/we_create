@@ -192,14 +192,21 @@ textarea {
 }
 
 .menu__burger {
-  position: fixed;
+  display: none;
+  position: absolute;
   top: 30px;
   right: 30px;
   /* background-color: gray; */
-  width: 60px;
-  height: 45px;
+  width: 35px;
+  height: 30px;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+@media (max-width: 599px) {
+  .menu__burger {
+    display: block;
+  }
 }
 
 .menu__burger.active {
@@ -210,9 +217,10 @@ textarea {
 .menu__burger span {
   position: absolute;
   width: 100%;
-  height: 10px;
-  background-color: black;
+  height: 6px;
+  background-color: #440c74;
   left: 0;
+  border-radius: 2px;
   -webkit-transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;
   transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, -webkit-transform .2s .4s;
   transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
@@ -224,13 +232,13 @@ textarea {
 }
 
 .menu__burger.active span:nth-child(1) {
-  top: calc(50% - 5px);
+  top: calc(50% - 3px);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .menu__burger span:nth-child(2) {
-  top: calc(50% - 5px);
+  top: calc(50% - 3px);
 }
 
 .menu__burger.active span:nth-child(2) {
@@ -242,7 +250,7 @@ textarea {
 }
 
 .menu__burger.active span:nth-child(3) {
-  bottom: calc(50% - 5px);
+  bottom: calc(50% - 3px);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -264,15 +272,45 @@ textarea {
   list-style: none;
 }
 
+@media (max-width: 599px) {
+  .menu__list {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(68, 12, 116, 0.9);
+    height: 100vh;
+    width: 70vw;
+    z-index: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .menu__list.active {
+    left: 0;
+  }
+}
+
 .menu__link {
   position: relative;
   display: block;
-  font: 600 1.2rem/10vh "Montserrat", sans-serif;
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  line-height: 10vh;
   color: #440c74;
   text-transform: uppercase;
   padding: 0 25px;
   overflow: hidden;
+}
+
+@media (max-width: 599px) {
+  .menu__link {
+    color: #fff;
+  }
 }
 
 .menu__link::before {
@@ -285,6 +323,12 @@ textarea {
   background-color: #440c74;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+@media (max-width: 599px) {
+  .menu__link::before {
+    display: none;
+  }
 }
 
 .menu__link:hover::before {

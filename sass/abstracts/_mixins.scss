@@ -23,3 +23,33 @@
 @mixin translateY($y) {
     transform: translateY($y)
 }
+
+// ----- MEDIA QUERIES -----
+
+// Small devices
+@mixin sm-media {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md-media {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+// Large devices
+// @mixin lg-media {
+//     @media (min-width: #{$screen-lg-min}) {
+//         @content;
+//     }
+// }
+
+// Extra large devices
+@mixin xl-media {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
