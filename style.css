@@ -1,7 +1,10 @@
-* {
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
@@ -116,7 +119,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 50px 20px;
+  margin: 60px 20px;
 }
 
 .card__wrapper {
@@ -163,15 +166,22 @@ body {
   line-height: 1.5;
 }
 
-.card__btn {
-  display: inline-block;
+.btn {
+  box-sizing: content-box;
   font-size: 1.2rem;
   font-family: var(--heading-font);
   font-weight: 700;
-  padding: 10px 20px;
-  border: 2px solid #C244C1;
   text-decoration: none;
   letter-spacing: 1.5px;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.card__btn {
+  display: inline-block;
+  border: 2px solid #C244C1;
 }
 
 .card__img {
@@ -192,7 +202,7 @@ body {
   background-size: 136%;
   width: 100%;
   height: 300px;
-  margin: 60px 0;
+  margin: 80px 0;
 }
 
 .banner__text {
@@ -256,26 +266,30 @@ body {
 }
 
 .contact__form {
-  /* width: 80%; */
-  /* width: 500px; */
-}
-
-.form__label {
-  display: block;
-  width: 400px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 5% 20%;
 }
 
 .form__input {
-  display: block;
-  width: 400px;
-  margin: 0 auto;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--main-color);
-  padding: 10px;
+  padding: 2px 10px;
+  font-size: 1.2rem;
+  font-family: var(--regular-font);
+  color: var(--main-color);
 }
 
 .form__input__textarea {
   border: 2px solid var(--main-color);
+  margin: 10px 0;
+}
+
+.form__btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
