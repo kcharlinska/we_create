@@ -10,10 +10,19 @@
         margin: 20px 0 0 100px;
         position: relative;
 
+        @include sm-media {
+            margin: 20px 0 0 20px;
+        }
     }
 
     &__content {
         padding: 20px 0;
+    }
+
+    &--two {
+        @include md-media {
+            order: -1;
+        }
     }
 }
 
@@ -26,30 +35,47 @@
         top: -60px;
         font-size: 20rem;
         z-index: -1;
+
+        @include sm-media {
+            font-size: 10rem;
+        }
     }
 
     .card--one &::before {
         content: '1.';
         left: -70px;
         color: $color-n1;
+
+        @include sm-media {
+            left: -20px;
+        }
     }
 
     .card--two &::before {
         content: '2.';
         left: -70px;
         color: $color-n2;
+
+        @include sm-media {
+            left: -20px;
+        }
     }
 
     .card--three &::before {
         content: '3.';
         left: -110px;
         color: $color-n3;
+
+        @include sm-media {
+            left: -20px;
+        }
     }
 }
 
 .card__img {
     flex-basis: 409px;
     height: 100%;
+    margin: 20px 0;
 
     img {
         display: block;

@@ -4,6 +4,10 @@
     position: relative;
     height: 445px;
     background: $bgc-header;
+
+    @include sm-media {
+        height: 100vh;
+    }
 }
 
 // Hero
@@ -22,9 +26,9 @@
     letter-spacing: 3px;
     margin-top: -10px;
 
-    // &--main {
-    //     font: $font-bold 9.5rem $font-heading;
-    // }
+    @include sm-media {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -32,6 +36,10 @@
 
 .wave {
     @include position(absolute, $bottom: 0);
+
+    @include sm-media {
+        display: none;
+    }
 
     &--lilac {
         @include translateY(-45%);
@@ -69,23 +77,35 @@
 // Footer
 
 .side__footer {
+    position: relative;
     @include flexCenter;
     flex-direction: row;
-    flex-wrap: wrap;
     background: $bgc-footer;
+
+    @include sm-media {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
     .footer__content {
         display: flex;
         flex-direction: column;
         flex-basis: 50%;
         height: 445px;
-        min-width: 500px;
+
+        @include md-media {
+            flex-basis: 45%;
+        }
+
+        @include sm-media {
+            height: 150px;
+        }
+
     }
 
     .footer__contact {
-        flex-basis: 50%;
+        flex-grow: 1;
         height: 445px;
-        min-width: 500px;
     }
 }
 
@@ -99,6 +119,15 @@
     h3 {
         flex-basis: 60%;
         font-size: 5.2rem;
+
+        @include md-media {
+            flex-basis: 75%;
+            font-size: 3.2rem;
+        }
+
+        @include sm-media {
+            flex-basis: 80%;
+        }
     }
 }
 
@@ -107,4 +136,16 @@
     flex-basis: 10%;
     width: 60%;
     margin: 0 auto;
+
+    @include md-media {
+        width: 75%;
+    }
+
+    @include sm-media {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5% 10%;
+    }
 }

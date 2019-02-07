@@ -5,12 +5,24 @@ body {
 
 h1 {
     font: $font-weight-bold 9.5rem $font-heading;
+
+    @include md-media {
+        font-size: 7rem;
+    }
+
+    @include sm-media {
+        font-size: 4rem;
+    }
 }
 
 h2 {
-    font: $font-weight-bold 6rem/300px $font-heading;
+    font: $font-weight-bold 5.5rem/300px $font-heading;
     color: $white-color;
     text-align: center;
+
+    @include sm-media {
+        font-size: 3rem;
+    }
 }
 
 h3 {

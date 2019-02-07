@@ -22,10 +22,28 @@ h1 {
   font: 700 9.5rem "Montserrat", sans-serif;
 }
 
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 h2 {
-  font: 700 6rem/300px "Montserrat", sans-serif;
+  font: 700 5.5rem/300px "Montserrat", sans-serif;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -52,6 +70,12 @@ textarea {
   background: linear-gradient(45deg, #f86881, #9235ed);
 }
 
+@media (max-width: 599px) {
+  .side__header {
+    height: 100vh;
+  }
+}
+
 .hero__section {
   position: absolute;
   top: 50%;
@@ -70,9 +94,21 @@ textarea {
   margin-top: -10px;
 }
 
+@media (max-width: 599px) {
+  .hero__text {
+    font-size: 1.2rem;
+  }
+}
+
 .wave {
   position: absolute;
   bottom: 0;
+}
+
+@media (max-width: 599px) {
+  .wave {
+    display: none;
+  }
 }
 
 .wave--lilac {
@@ -106,6 +142,7 @@ textarea {
 }
 
 .side__footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,9 +156,19 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background: linear-gradient(45deg, #fb81c4, #AC47E2);
+}
+
+@media (max-width: 599px) {
+  .side__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
 }
 
 .side__footer .footer__content {
@@ -135,14 +182,26 @@ textarea {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   height: 445px;
-  min-width: 500px;
+}
+
+@media (max-width: 1024px) {
+  .side__footer .footer__content {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
+@media (max-width: 599px) {
+  .side__footer .footer__content {
+    height: 150px;
+  }
 }
 
 .side__footer .footer__contact {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 445px;
-  min-width: 500px;
 }
 
 .footer__text--main {
@@ -166,11 +225,42 @@ textarea {
   font-size: 5.2rem;
 }
 
+@media (max-width: 1024px) {
+  .footer__text--main h3 {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer__text--main h3 {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+
 .footer__text--copy {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
   width: 60%;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .footer__text--copy {
+    width: 75%;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer__text--copy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5% 10%;
+  }
 }
 
 .btn {
@@ -362,8 +452,22 @@ textarea {
   position: relative;
 }
 
+@media (max-width: 599px) {
+  .card__wrapper {
+    margin: 20px 0 0 20px;
+  }
+}
+
 .card__content {
   padding: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  .card--two {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 .card__title {
@@ -377,10 +481,22 @@ textarea {
   z-index: -1;
 }
 
+@media (max-width: 599px) {
+  .card__title::before {
+    font-size: 10rem;
+  }
+}
+
 .card--one .card__title::before {
   content: '1.';
   left: -70px;
   color: #E579D7;
+}
+
+@media (max-width: 599px) {
+  .card--one .card__title::before {
+    left: -20px;
+  }
 }
 
 .card--two .card__title::before {
@@ -389,16 +505,29 @@ textarea {
   color: #FB8097;
 }
 
+@media (max-width: 599px) {
+  .card--two .card__title::before {
+    left: -20px;
+  }
+}
+
 .card--three .card__title::before {
   content: '3.';
   left: -110px;
   color: #E421B4;
 }
 
+@media (max-width: 599px) {
+  .card--three .card__title::before {
+    left: -20px;
+  }
+}
+
 .card__img {
   -ms-flex-preferred-size: 409px;
       flex-basis: 409px;
   height: 100%;
+  margin: 20px 0;
 }
 
 .card__img img {
@@ -418,6 +547,18 @@ textarea {
       justify-content: space-around;
   height: 100%;
   padding: 5% 20%;
+}
+
+@media (max-width: 1024px) {
+  .contact__form {
+    padding: 10%;
+  }
+}
+
+@media (max-width: 599px) {
+  .contact__form {
+    padding: 10% 10% 20% 10%;
+  }
 }
 
 .form__input {

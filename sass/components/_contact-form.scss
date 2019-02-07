@@ -4,6 +4,14 @@
     justify-content: space-around;
     height: 100%;
     padding: 5% 20%;
+
+    @include md-media {
+        padding: 10%;
+    }
+
+    @include sm-media {
+        padding: 10% 10% 20% 10%;
+    }
 }
 
 .form__input {
