@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 12px;
+  overflow: auto;
 }
 
 *,
@@ -11,6 +12,10 @@ html {
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+body {
+  overflow: hidden;
 }
 
 body {
@@ -114,21 +119,21 @@ textarea {
 .wave--lilac {
   -webkit-transform: translateY(-45%);
           transform: translateY(-45%);
-  right: 0;
+  right: -2px;
   width: 30vw;
 }
 
 .wave--purple {
-  -webkit-transform: translateY(60%);
-          transform: translateY(60%);
-  right: 0;
+  -webkit-transform: translateY(58%);
+          transform: translateY(58%);
+  right: -2px;
   width: 40vw;
 }
 
 .wave--pink {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  left: 0;
+  left: -2px;
   width: 50vw;
 }
 

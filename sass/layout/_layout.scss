@@ -43,19 +43,19 @@
 
     &--lilac {
         @include translateY(-45%);
-        right: 0;
+        right: -2px;
         width: 30vw;
     }
 
     &--purple {
-        @include translateY(60%);
-        right: 0;
+        @include translateY(58%);
+        right: -2px;
         width: 40vw;
     }
 
     &--pink {
         @include translateY(50%);
-        left: 0;
+        left: -2px;
         width: 50vw;
     }
 }

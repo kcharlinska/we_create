@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 12px;
+  overflow: auto;
 }
 
 *,
@@ -9,4 +10,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+body {
+  overflow: hidden;
 }
