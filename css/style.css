@@ -56,14 +56,15 @@ h3 {
 }
 
 a,
-button {
+button,
+input.form__btn {
   font: 700 1.2rem/40px "Montserrat", sans-serif;
   letter-spacing: 1.5px;
   text-decoration: none;
   text-align: center;
 }
 
-input,
+input:not(.form__btn),
 textarea {
   font: 1.2rem "Roboto", sans-serif;
   color: #440c74;
@@ -161,7 +162,8 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: linear-gradient(45deg, #fb81c4, #AC47E2);
+  background: -webkit-gradient(linear, left top, right top, from(#FF7FC4), to(#9628EF));
+  background: linear-gradient(90deg, #FF7FC4, #9628EF);
 }
 
 @media (max-width: 599px) {
@@ -294,8 +296,8 @@ textarea {
   /* background-color: gray; */
   width: 35px;
   height: 30px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 @media (max-width: 599px) {
@@ -383,8 +385,8 @@ textarea {
     height: 100vh;
     width: 70vw;
     z-index: 1;
-    -webkit-transition: .3s;
-    transition: .3s;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
   }
   .menu__list.active {
     left: 0;
@@ -405,6 +407,12 @@ textarea {
 @media (max-width: 599px) {
   .menu__link {
     color: #fff;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  .menu__link:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -416,8 +424,8 @@ textarea {
   width: 80%;
   height: 2px;
   background-color: #440c74;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 
 @media (max-width: 599px) {

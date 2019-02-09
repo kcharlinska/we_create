@@ -24,6 +24,11 @@
     transform: translateY($y)
 }
 
+// Transition element on hover and mobile menu
+@mixin transition($t) {
+    transition: $t linear;
+}
+
 // ----- MEDIA QUERIES -----
 
 // Small devices

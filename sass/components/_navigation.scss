@@ -19,7 +19,7 @@
         height: 100vh;
         width: 70vw;
         z-index: 1;
-        transition: .3s;
+        @include transition(.5s);
 
         &.active {
             left: 0;
@@ -39,6 +39,11 @@
 
     @include sm-media {
         color: $white-color;
+        @include transition(.3s);
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &::before {
@@ -47,7 +52,7 @@
         width: 80%;
         height: 2px;
         background-color: $main-color;
-        transition: .4s;
+        @include transition(.4s);
 
         @include sm-media {
             display: none;
