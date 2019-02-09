@@ -30,14 +30,15 @@ h3 {
 }
 
 a,
-button {
+button,
+input.form__btn {
     font: $font-weight-bold 1.2rem/40px $font-heading;
     letter-spacing: 1.5px;
     text-decoration: none;
     text-align: center;
 }
 
-input,
+input:not(.form__btn),
 textarea {
     font: 1.2rem $font-main;
     color: $main-color;
