@@ -140,7 +140,7 @@ textarea {
 
 .banner {
   position: relative;
-  background: center 10% no-repeat url("../../images/fullbg.jpg");
+  background: center 10% no-repeat url("../images/fullbg.jpg");
   background-size: 136%;
   width: 100%;
   height: 300px;
@@ -280,6 +280,7 @@ textarea {
 .card__btn {
   display: block;
   border: 2px solid #C244C1;
+  color: #440c74;
 }
 
 .form__btn {
